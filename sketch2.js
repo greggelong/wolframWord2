@@ -61,7 +61,7 @@ function setup() {
   print("bing",box.checked())
   setBinRule()
   createCanvas(windowWidth, windowHeight);
-  textAlign(LEFT,CENTER);
+  textAlign(CENTER,CENTER);
   textStyle(BOLD);
   cellw = (windowWidth/29)  // if you don't floor it it gits some nice collisions
   background(0,51,0);
@@ -145,12 +145,13 @@ function displayCells(generation) {
     //noStroke();
    //
     fill(clrb)
-    stroke(clrb)
+    //noStroke()
+    stroke(255)
     rect(i*cellw,generation*cellw,cellw,cellw)
     noStroke()
     fill(clr) 
     textSize(cellw/(cells[i].b.length/1.3))
-    text(cells[i].b,(i) * cellw,generation * cellw+(cellw/2 ))
+    text(cells[i].b,(i) * cellw+(cellw/2 ),generation * cellw+(cellw/2 ))
   }
 
 }
