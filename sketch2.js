@@ -126,18 +126,18 @@ function displayCells(generation) {
 
 
   for (let i = 0; i < cells.length; i++) {
-    fill(240)
+    fill(255)
     let clr;
-    rect(i * cellw, generation * cellw, width, cellw);
+    rect(i * cellw, (generation * cellw)+0.6, width, cellw);
     if (cells[i].a === 0) {
       //console.log("white");
       clr =color(51, 153, 255);
       clrb= color(255, 102, 153,100);
-      stroke(51, 153, 255)
+      
     } else {
        clr = color(255, 102, 153);
        clrb = color(51, 153, 255,100);
-      stroke(51, 153, 255)
+      
       //console.log("black");
     }
     //noStroke()//strokeWeight(0.5);
@@ -145,8 +145,8 @@ function displayCells(generation) {
     //noStroke();
    //
     fill(clrb)
-    //noStroke()
-    stroke(255)
+    noStroke()
+    //stroke(clrb)
     rect(i*cellw,generation*cellw,cellw,cellw)
     noStroke()
     fill(clr) 
